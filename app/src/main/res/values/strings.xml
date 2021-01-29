@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Modeling_of_AP</string>
+    <string name="new_process">+</string>
+    <string name="enter">Введите название продукта</string>
+    <string name="deleteFromDB">Удалить данные о продукте и сам продукт</string>
+    <string name="addToDB">Добавить данные о продукте и сам продукт</string>
+    <string name="dataAboutProducts">Данные о продуктах</string>
+    <string name="getfromDB">Получить список</string>
+    <string name="name">Наименование продукта</string>
+    <string name="calories">Калории в 100 г.</string>
+    <string name="proteins">Белки в 100 г.</string>
+    <string name="carbohydrates">Углеводы в 100 г.</string>
+    <string name="fats">Жиры в 100 г.</string>
+    <string name="backToActivity">Вернуться на предыдущую страницу</string>
+</resources>
