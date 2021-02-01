@@ -32,10 +32,10 @@ public class DataBased extends AppCompatActivity implements View.OnClickListener
     private EditText editText_carbohydrates;
     private EditText editText_fats;
     private String food_name;
-    private int calories;
-    private int proteins;
-    private int carbohydrates;
-    private int fats;
+    private double calories;
+    private double proteins;
+    private double carbohydrates;
+    private double fats;
     private Everything stuff;
     private ListView listView;
     private static Context context;
@@ -88,21 +88,27 @@ public class DataBased extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.add: {
                 food_name = editText_name.getText().toString();
-                calories = Integer.parseInt(editText_calories.getText().toString());
-                proteins = Integer.parseInt(editText_proteins.getText().toString());
-                carbohydrates = Integer.parseInt(editText_carbohydrates.getText().toString());
-                fats = Integer.parseInt(editText_fats.getText().toString());
                 try {
-                    stuff = new Everything(-1, food_name, calories, proteins, carbohydrates, fats);
-                    showToast(this, "Успешно сохранено в БД");
-                } catch (Exception ex){
-                    showToast(this, "Не вышло сохранить в БД");
+                    calories = Double.parseDouble(editText_calories.getText().toString());
+                    proteins = Double.parseDouble(editText_proteins.getText().toString());
+                    carbohydrates = Double.parseDouble(editText_carbohydrates.getText().toString());
+                    fats = Double.parseDouble(editText_fats.getText().toString());
+                    try {
+                        stuff = new Everything(-1, food_name, calories, proteins, carbohydrates, fats);
+                        showToast(this, "Успешно сохранено в БД");
+                    } catch (Exception ex){
+                        showToast(this, "Не вышло сохранить в БД");
+                    }
+                    helper = new Helper(DataBased.this);
+                    boolean sucess = helper.setAmountToDB(stuff);
+                    showToast(this, "Успешный Результат = " + Boolean.toString(sucess));
+                    adapterSet(helper);
+
+                } catch (NumberFormatException e) {
+                    showToast(this, "Надо писать через (.), а не через (,)");
+                } finally {
+                    break;
                 }
-                helper = new Helper(DataBased.this);
-                boolean sucess = helper.setAmountToDB(stuff);
-                showToast(this, "Успешный Результат = " + Boolean.toString(sucess));
-                adapterSet(helper);
-                break;
             }
             case R.id.del: {
                 showToast(this, "Чтобы удалить, нажмите на элемент в списке!");

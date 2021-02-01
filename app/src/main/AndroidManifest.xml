@@ -3,6 +3,7 @@
     package="com.example.modeling_of_ap">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Modeling_of_AP">
+        <activity android:name=".DayRatio"></activity>
         <activity android:name=".DataBased" />
         <activity android:name=".MainActivity">
             <intent-filter>

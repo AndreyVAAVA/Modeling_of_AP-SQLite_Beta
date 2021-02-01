@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Modeling_of_AP</string>
     <string name="new_process">+</string>
-    <string name="enter">Введите название продукта</string>
+    <string name="enter">Введите количество грамм продукта(только для бета версии и дебага)</string>
     <string name="deleteFromDB">Удалить данные о продукте и сам продукт</string>
     <string name="addToDB">Добавить данные о продукте и сам продукт</string>
     <string name="dataAboutProducts">Данные о продуктах</string>

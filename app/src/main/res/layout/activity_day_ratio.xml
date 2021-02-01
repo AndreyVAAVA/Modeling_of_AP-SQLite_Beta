@@ -4,14 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/root"
-    tools:context=".MainActivity">
+    tools:context=".DayRatio">
+    <Button
+        android:id="@+id/ret"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black_orange"
+        android:text="@string/backToActivity"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/userList"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/userList"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/foodList"
+        app:layout_constraintTop_toBottomOf="@+id/ret"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/new_el_from_data"
+        app:layout_constraintBottom_toTopOf="@+id/weight_it"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -20,12 +32,12 @@
         />
 
     <EditText
-        android:id="@+id/new_el_from_data"
+        android:id="@+id/weight_it"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_new"
+        app:layout_constraintBottom_toTopOf="@id/btn_add"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userList"
+        app:layout_constraintTop_toBottomOf="@id/foodList"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="0dp"
         android:background="@color/black_orange"
@@ -37,12 +49,12 @@
     </EditText>
 
     <Button
-        android:id="@+id/btn_new"
+        android:id="@+id/btn_add"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_new_act_add"
+        app:layout_constraintBottom_toTopOf="@id/getFoodData"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/new_el_from_data"
+        app:layout_constraintTop_toBottomOf="@id/weight_it"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/black_orange"
@@ -50,16 +62,30 @@
         android:textSize="25sp"/>
 
     <Button
-        android:id="@+id/btn_new_act_add"
+        android:id="@+id/getFoodData"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/foodData"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_new"
+        app:layout_constraintTop_toBottomOf="@id/btn_add"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/black_orange"
         android:text="@string/dataAboutProducts"
         android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/foodData"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getFoodData"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/black_orange"
+        android:text="@string/dataAboutProducts"
+        android:textSize="25sp"
+        android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
