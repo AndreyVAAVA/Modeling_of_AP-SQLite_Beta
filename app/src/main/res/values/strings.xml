@@ -1,15 +1,28 @@
 <resources>
-    <string name="app_name">Modeling_of_AP</string>
+    <string name="app_name">Измеритель веса</string>
     <string name="new_process">+</string>
+    <string name="add">Продукты</string>
+    <string name="addTotal">Потреблённые продукты</string>
     <string name="enter">Введите количество грамм продукта(только для бета версии и дебага)</string>
     <string name="deleteFromDB">Удалить данные о продукте и сам продукт</string>
     <string name="addToDB">Добавить данные о продукте и сам продукт</string>
     <string name="dataAboutProducts">Данные о продуктах</string>
     <string name="getfromDB">Получить список</string>
     <string name="name">Наименование продукта</string>
-    <string name="calories">Калории в 100 г.</string>
+    <string name="calories">КилоКалории в 100 г.</string>
     <string name="proteins">Белки в 100 г.</string>
     <string name="carbohydrates">Углеводы в 100 г.</string>
     <string name="fats">Жиры в 100 г.</string>
+    <string name="sugars">Сахара в 100г.</string>
     <string name="backToActivity">Вернуться на предыдущую страницу</string>
+    <string name="begin">Подключиться к весам</string>
+    <string name="send">Получить данные</string>
+    <string name="stop">Отключиться от весов</string>
+    <string name="clear">Очистить поле</string>
+    <string name="addEated">Добавить съеденный продукт</string>
+    <string name="cal_help">Калории:</string>
+    <string name="prot_help">Белки:</string>
+    <string name="fats_help">Жиры:</string>
+    <string name="carb_help">Углеводы:</string>
+    <string name="sgrs_help">Сахара:</string>
 </resources>
